@@ -4,242 +4,6 @@
     <meta charset="UTF-8">
     <title>YOU SINSA - Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-
-        .cloth-selector {
-            display: none;
-        }
-
-        .fitting-room {
-            display: grid;
-            grid-template-columns: 1.1fr 1fr; 
-            gap: 50px;
-            margin-top: 40px;
-            align-items: start;
-        }
-
-
-        .canvas-area {
-            border: 2px dashed #00311E;
-            background-color: rgba(255,255,255,0.3);
-            height: 800px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding: 40px 0;
-        }
-
-        .preview-box {
-            width: 200px;
-            height: 160px; 
-            border: 1px solid #00311E;
-            margin: 12px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            position: relative;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-      
-        #cap-preview {
-            height: 80px; 
-        }
-
-        #bottom-preview {
-            height: 320px; 
-        }
-
-        .preview-box .placeholder-text {
-            position: absolute;
-            z-index: 1;
-            color: #00311E;
-            font-weight: bold;
-            font-size: 15px;
-        }
-
-  
-        #cap-preview .placeholder-text {
-            font-size: 13px;
-        }
-
-        .preview-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; 
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-            z-index: 2;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        #cap-preview img {
-            padding: 5px;
-        }
-
-
-
-        #cap1:checked ~ .container #cap-preview .img-cap1 { display: block; }
-        #cap2:checked ~ .container #cap-preview .img-cap2 { display: block; }
-        #cap3:checked ~ .container #cap-preview .img-cap3 { display: block; }
-        #cap4:checked ~ .container #cap-preview .img-cap4 { display: block; }
-        #cap5:checked ~ .container #cap-preview .img-cap5 { display: block; }
-        #cap6:checked ~ .container #cap-preview .img-cap6 { display: block; }
-        #cap7:checked ~ .container #cap-preview .img-cap7 { display: block; }
-         
-
-        #top1:checked ~ .container #top-preview .img-top1 { display: block; }
-        #top2:checked ~ .container #top-preview .img-top2 { display: block; }
-        #top3:checked ~ .container #top-preview .img-top3 { display: block; }
-        #top4:checked ~ .container #top-preview .img-top4 { display: block; }
-        #top5:checked ~ .container #top-preview .img-top5 { display: block; }
-         
-
-        #bottom1:checked ~ .container #bottom-preview .img-bottom1 { display: block; }
-        #bottom2:checked ~ .container #bottom-preview .img-bottom2 { display: block; }
-        #bottom3:checked ~ .container #bottom-preview .img-bottom3 { display: block; }
-        #bottom4:checked ~ .container #bottom-preview .img-bottom4 { display: block; }
-        #bottom5:checked ~ .container #bottom-preview .img-bottom5 { display: block; }
-
-        #shoes1:checked ~ .container #shoes-preview .img-shoes1 { display: block; }
-        #shoes2:checked ~ .container #shoes-preview .img-shoes2 { display: block; }
-        #shoes3:checked ~ .container #shoes-preview .img-shoes3 { display: block; }
-        #shoes4:checked ~ .container #shoes-preview .img-shoes4 { display: block; }
-        #shoes5:checked ~ .container #shoes-preview .img-shoes5 { display: block; }
-        #shoes6:checked ~ .container #shoes-preview .img-shoes6 { display: block; }
-        #shoes7:checked ~ .container #shoes-preview .img-shoes7 { display: block; }
-
-
-        #cap1:checked ~ .container #cap-preview .placeholder-text,
-        #cap2:checked ~ .container #cap-preview .placeholder-text,
-        #cap3:checked ~ .container #cap-preview .placeholder-text,
-        #cap4:checked ~ .container #cap-preview .placeholder-text,
-        #cap5:checked ~ .container #cap-preview .placeholder-text,
-        #cap6:checked ~ .container #cap-preview .placeholder-text,
-        #cap7:checked ~ .container #cap-preview .placeholder-text { display: none; }
-
-        #top1:checked ~ .container #top-preview .placeholder-text,
-        #top2:checked ~ .container #top-preview .placeholder-text,
-        #top3:checked ~ .container #top-preview .placeholder-text,
-        #top4:checked ~ .container #top-preview .placeholder-text,
-        #top5:checked ~ .container #top-preview .placeholder-text { display: none; }
-
-        #bottom1:checked ~ .container #bottom-preview .placeholder-text,
-        #bottom2:checked ~ .container #bottom-preview .placeholder-text,
-        #bottom3:checked ~ .container #bottom-preview .placeholder-text,
-        #bottom4:checked ~ .container #bottom-preview .placeholder-text,
-        #bottom5:checked ~ .container #bottom-preview .placeholder-text { display: none; }
-
-        #shoes1:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes2:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes3:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes4:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes5:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes6:checked ~ .container #shoes-preview .placeholder-text,
-        #shoes7:checked ~ .container #shoes-preview .placeholder-text { display: none; }
-
-
-
-        .wishlist-side {
-            border: 1px solid #00311E;
-            background-color: rgba(255, 255, 255, 0.2);
-            height: 800px;
-            overflow-y: auto;
-            padding: 30px;
-        }
-
-        .category-section {
-            border-bottom: 2px solid #00311E;
-            padding-bottom: 25px;
-            margin-bottom: 25px;
-        }
-        
-        .category-section:last-child {
-            border-bottom: none; 
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-
-        .category-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .horizontal-scroll-wrapper {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto; 
-            padding-bottom: 10px;
-            scroll-behavior: smooth;
-        }
-
-        .horizontal-scroll-wrapper::-webkit-scrollbar {
-            height: 6px;
-        }
-        .horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
-            background-color: #00311E;
-            border-radius: 3px;
-        }
-        .horizontal-scroll-wrapper::-webkit-scrollbar-track {
-            background-color: rgba(0, 49, 30, 0.1);
-        }
-
-        .product-item-box {
-            flex: 0 0 140px; 
-            height: 170px;   
-            border: 1px solid rgba(0, 49, 30, 0.5);
-            background: #fff;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-        }
-
-        .product-item-box .prod-img-area {
-            width: 100%;
-            height: 125px;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            color: #777;
-        }
-
-        .product-item-box .prod-img-area img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 5px;
-            box-sizing: border-box;
-        }
-
-        .btn-label {
-            background-color: #00311E;
-            color: #FEF7E5;
-            text-align: center;
-            padding: 8px 0;
-            font-size: 13px;
-            cursor: pointer;
-            display: block;
-            width: 100%;
-            transition: background-color 0.3s;
-        }
-        .btn-label:hover {
-            background-color: #004d30;
-        }
-    </style>
 </head>
 <body>
 
@@ -335,33 +99,23 @@
                     <div class="category-title">Headwear</div>
                     <div class="horizontal-scroll-wrapper">
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./IMG_0930.png" alt="모자3 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./IMG_0930.png" alt="모자3 사진"></div>
                             <label for="cap3" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./IMG_0931.png" alt="모자4 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./IMG_0931.png" alt="모자4 사진"></div>
                             <label for="cap4" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./IMG_0929.png" alt="모자5 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./IMG_0929.png" alt="모자5 사진"></div>
                             <label for="cap5" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./IMG_0940.png" alt="모자6 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./IMG_0940.png" alt="모자6 사진"></div>
                             <label for="cap6" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./IMG_0935.png" alt="모자7 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./IMG_0935.png" alt="모자7 사진"></div>
                             <label for="cap7" class="btn-label">입혀보기</label>
                         </div>
                     </div>
@@ -371,33 +125,23 @@
                     <div class="category-title">Tops</div>
                     <div class="horizontal-scroll-wrapper">
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./1-1.png" alt="상의1 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./1-1.png" alt="상의1 사진"></div>
                             <label for="top1" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./1-2.png" alt="상의2 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./1-2.png" alt="상의2 사진"></div>
                             <label for="top2" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./1-3.png" alt="상의3 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./1-3.png" alt="상의3 사진"></div>
                             <label for="top3" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./1-11.png" alt="상의4 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./1-11.png" alt="상의4 사진"></div>
                             <label for="top4" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="./1-12.png" alt="상의5 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="./1-12.png" alt="상의5 사진"></div>
                             <label for="top5" class="btn-label">입혀보기</label>
                         </div>
                     </div>
@@ -407,33 +151,23 @@
                     <div class="category-title">Bottoms</div>
                     <div class="horizontal-scroll-wrapper">
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="IMG_0947.PNG" alt="하의1 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="IMG_0947.PNG" alt="하의1 사진"></div>
                             <label for="bottom1" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="IMG_0941.png" alt="하의2 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="IMG_0941.png" alt="하의2 사진"></div>
                             <label for="bottom2" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="IMG_0943.png" alt="하의3 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="IMG_0943.png" alt="하의3 사진"></div>
                             <label for="bottom3" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="IMG_0944.png" alt="하의4 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="IMG_0944.png" alt="하의4 사진"></div>
                             <label for="bottom4" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="IMG_0946.png" alt="하의5 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="IMG_0946.png" alt="하의5 사진"></div>
                             <label for="bottom5" class="btn-label">입혀보기</label>
                         </div>
                     </div>
@@ -443,33 +177,23 @@
                     <div class="category-title">Shoes</div>
                     <div class="horizontal-scroll-wrapper">
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="KakaoTalk_20260531_192915346.png" alt="신발3 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="KakaoTalk_20260531_192915346.png" alt="신발3 사진"></div>
                             <label for="shoes3" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="KakaoTalk_20260531_192915346_02.png" alt="신발4 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="KakaoTalk_20260531_192915346_02.png" alt="신발4 사진"></div>
                             <label for="shoes4" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="KakaoTalk_20260531_192915346_03.png" alt="신발5 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="KakaoTalk_20260531_192915346_03.png" alt="신발5 사진"></div>
                             <label for="shoes5" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="KakaoTalk_20260531_192915346_06.png" alt="신발6 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="KakaoTalk_20260531_192915346_06.png" alt="신발6 사진"></div>
                             <label for="shoes6" class="btn-label">입혀보기</label>
                         </div>
                         <div class="product-item-box">
-                            <div class="prod-img-area">
-                                <img src="KakaoTalk_20260531_192915346_08.png" alt="신발7 사진">
-                            </div>
+                            <div class="prod-img-area"><img src="KakaoTalk_20260531_192915346_08.png" alt="신발7 사진"></div>
                             <label for="shoes7" class="btn-label">입혀보기</label>
                         </div>
                     </div>
