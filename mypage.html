@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YOU SINSA - My Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .account-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        .form-box {
+            border: 1px solid #00311E;
+            padding: 30px;
+            background: rgba(255,255,255,0.4);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00311E;
+            background-color: #fff;
+            font-family: inherit;
+        }
+        .inline-inputs {
+            display: flex;
+            gap: 20px;
+        }
+        .inline-inputs div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">YOU SINSA</a></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="color.html">Color Match</a>
+            <a href="snap.html">Snap</a>
+            <a href="mypage.html">My Page</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>마이페이지 / 계정 설정</h2>
+        
+        <div class="account-section">
+            <div class="form-box">
+                <h3>회원 로그인</h3>
+                <br>
+                <div class="form-group">
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" placeholder="Enter ID">
+                </div>
+                <div class="form-group">
+                    <label for="userPw">비밀번호</label>
+                    <input type="password" id="userPw" placeholder="Enter Password">
+                </div>
+                <button type="button" style="width: 100%;" onclick="alert('로그인 성공! (Mock-up 임시 작동)')">로그인</button>
+            </div>
+
+            <div class="form-box">
+                <h3>배송지 및 유저 실측정보</h3>
+                <br>
+                <div class="form-group">
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" placeholder="홍길동">
+                </div>
+                <div class="form-group">
+                    <label for="userAddr">주소</label>
+                    <textarea id="userAddr" rows="2" placeholder="서울특별시 강남구..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>[실측 정보]</label>
+                    <div class="inline-inputs">
+                        <div>
+                            <input type="text" placeholder="키 (cm)">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="몸무게 (kg)">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" style="width: 100%;" onclick="alert('정보가 안전하게 저장되었습니다.')">저장하기</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>팀 프로젝트: 최민서 이은우 유혜원 서호준 | © 2026 YOU SINSA</p>
+    </footer>
+
+</body>
+</html>
