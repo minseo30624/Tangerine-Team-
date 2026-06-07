@@ -4,68 +4,9 @@
     <meta charset="UTF-8">
     <title>YOU SINSA - Color Match</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-            background: #fff;
-        }
-        th, td {
-            border: 1px solid #00311E;
-            padding: 15px;
-            text-align: center;
-        }
-        th {
-            background-color: #00311E;
-            color: #FEF7E5;
-        }
-        .color-circle {
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            flex-shrink: 0;
-        }
-        
-        .flex-colors {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap;
-            font-weight: bold;
-        }
-        .color-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 11px;
-        }
-
-        .main-color-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            align-items: center;
-            gap: 10px;
-            width: 140px; 
-            margin: 0 auto;
-        }
-        .circle-col {
-            display: flex;
-            justify-content: flex-end; 
-        }
-        .text-col {
-            display: flex;
-            justify-content: flex-start; 
-            font-weight: bold;
-            font-size: 13px;
-        }
-    </style>
 </head>
 <body>
-
+ 
     <header>
         <div class="logo"><a href="index.html">YOU SINSA</a></div>
         <nav>
@@ -76,12 +17,12 @@
             <a href="mypage.html">My Page</a>
         </nav>
     </header>
-
+ 
     <div class="container">
         <h2>패린이를 위한 추천 색조합 가이드</h2>
         <p style="text-align: center;">색 조합을 활용하여 옷을 코디해 보세요!</p>
-
-        <table>
+ 
+        <table class="color-table">
             <thead>
                 <tr>
                     <th style="width: 25%;">메인 컬러</th>
@@ -192,10 +133,11 @@
             </tbody>
         </table>
     </div>
-
+ 
     <footer>
         <p>팀 프로젝트: 최민서 이은우 유혜원 서호준 | © 2026 YOU SINSA</p>
     </footer>
-
+ 
 </body>
 </html>
+ 
